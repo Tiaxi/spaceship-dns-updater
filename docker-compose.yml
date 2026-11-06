@@ -3,6 +3,7 @@ name: spaceship-dns-updater
 services:
   spaceship-dns-updater:
     build: .
+    pull_policy: build
     container_name: spaceship-dns-updater
     restart: unless-stopped
     env_file: ${ENV_FILE:-.env}
